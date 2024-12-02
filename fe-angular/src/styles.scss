@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+:root {
+  background-color: #e2e8e7;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1032px;
+  padding-inline: 16px;
+  margin-inline: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.main {
+  flex-grow: 1;
+  padding-block: 2rem;
+}
+.grow {
+  flex-grow: 1;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-block: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.btn {
+  font-size: inherit;
+  font-weight: inherit;
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+}

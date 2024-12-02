@@ -1,0 +1,23 @@
+<main class="main">
+  <h1>hello {{ title }}</h1>
+
+  @defer {
+  <my-comp
+    msg="child"
+    (addItemEvent)="addItem($event)"
+    [onAdd]="onAdd"
+  ></my-comp>
+  } @placeholder (minimum 1s) {
+  <div>Future content</div>
+  } @loading (minimum 2s) {
+  <div>loading...</div>
+  }
+
+  <div>
+    @for (item of items; track $index) {
+    <p>{{ item }}</p>
+    }
+  </div>
+</main>
+
+<router-outlet />
